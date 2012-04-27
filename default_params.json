@@ -1,0 +1,64 @@
+{
+  "schema":                          "PA-DSP-PARAMSET",
+  "schema_version":                 { "major": 1, "minor": 0 },
+
+  "version":                        { "major": 1, "minor": 0, "build": 0 },
+  "comment":                        "default parameters",
+  "author":                         "Otto Linnemann",
+
+  "date":                           { "year": 2010, "month": 02, "day": 15 },
+
+  "i32sampling":                    8000,
+  "i16destNoise":                   384,
+  "i16maxReduction":                32767,
+  "i16minReduction":                0,
+  "i16destLevel":                   16,
+  "i16comfortNoise":                20480,
+  "i16delayLine":                   4,
+  "i16agcMinDetectionPow":          4,
+
+  "i16OperationMode":
+  {
+    "emphasis":                     true,
+    "beamforming":                  true,
+    "aec":                          true,
+    "antibuffeting":                true,
+    "agc_nr_uplink":                true,
+    "agc_nr_downlink":              true,
+    "ec_agc_uplink":                true,
+    "ec_agc_downlink":              true,
+    "eq_uplink":                    true,
+    "eq_downlink":                  false
+   },
+
+  "i16bandWidth_comment":           "possible values are: 0 ( narrow band operation ), 1 (wide band operation )",
+  "i16bandWidth":                   0,
+
+  "i16mipsMode_comment":            "possible values are: 0: low, 1: moderate, 2: optimal, 3: high (reserved)",
+  "i16mipsMode":                    2,
+
+  "i16highPassCutoff":              1,
+  "i16uplink_lvl_exp":              0,
+  "i16uplink_lvl_scale":            32767,
+  "i16uplink_startgain":            3072,
+  "i16downlink_startgain":          1024,
+  "u16_bf_H_speech":                256,
+
+  "eq_uplink":
+  {
+    "band_factor_array":
+    [
+      [ 1, 70 ],
+      [ 2, 125 ],
+      [ 3, 161 ],
+      [ 4, 125 ],
+      [ 5, 101 ],
+      [ 6, 86 ],
+      [ 7, 79 ],
+      [ 8, 72 ],
+      [ 9, 70 ]
+    ],
+    "norm_shift": 2
+  }
+}
+
